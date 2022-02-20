@@ -1,0 +1,27 @@
+{
+  "user": [
+    {
+      "id": 10000000001
+    },
+    {
+      "id": 10000000002,
+      "firstname": "Sonam",
+      "lastname": "Kaslikar",
+      "primaryEmail": "",
+      "gender": "female",
+      "mobileNo": "",
+      "currentLoc": "",
+      "loanAmount": ""
+    },
+    {
+      "id": 10000000003,
+      "firstname": "Madhuri",
+      "lastname": "Ghatage",
+      "primaryEmail": "",
+      "gender": "female",
+      "mobileNo": "",
+      "currentLoc": "",
+      "loanAmount": ""
+    }
+  ]
+}

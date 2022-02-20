@@ -1,0 +1,115 @@
+<section >
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+      <!-- (ngSubmit)="onSubmit()" -->
+        <div class="form-group">
+            <label class="col-form-label">First Name </label>
+            <input id="firstname" name="firstname" type="firstname" class="form-control" formControlName="firstname">
+            <small *ngIf="firstname.invalid && firstname.touched"  class="text-danger" >Name is required.</small>
+        </div>
+        <!-- <div *ngIf="firstname.invalid && (firstname.touched)">
+            <div [hidden]="firstname?.errors?.['required']">
+                <small  class="text-danger">First Name is required</small>   
+            </div> -->
+        <!-- <div *ngIf="firstname.invalid && (firstname.dirty)"></div>
+            <div [hidden]="firstname?.errors?.['minlength']">
+                <small  class="text-danger">Min Length is 10</small>     
+            </div> -->
+        <!-- </div> -->
+        <div class="form-group">
+            <label class="col-form-label">Last Name </label>
+            <input id="lastname" name="lastname" type="lastname" class="form-control" formControlName="lastname">
+            <small *ngIf="contactForm.get('lastname').invalid && contactForm.get('lastname').touched"
+                class="text-danger">Name is required.</small>
+
+        </div>
+        <div class="form-group">
+          <label class="radioButton">Gender</label>
+          <!-- <input id="gender" name="gender" type="gender" class="form-control"
+              formControlName="gender" placeholder="Gender" /> -->
+              Male <input type="radio" value="male" id="gender" name="gender" class="radio" formControlName="gender"> 
+              Female <input type="radio" value="female" id="gender" name="gender" class="radio" formControlName="gender"> 
+              Other <input type="radio" value="other" id="gender" name="gender" class="radio" formControlName="gender"> 
+
+          <small *ngIf="contactForm.get('gender').invalid && contactForm.get('gender').touched"
+              class="text-danger">Select gender</small>
+      </div>
+        <!-- <div *ngIf="!lastname?.valid && (lastname?.dirty ||lastname?.touched)">
+        <div [hidden]="lastname?.errors?.['pattern']">
+            Only characters are allowed
+        </div>
+        <div [hidden]="lastname?.errors?.['maxLength']">
+            Max length allowed is {{lastname?.errors.['maxlength']?.[requiredLength']}}
+        </div>
+        <div [hidden]="lastname?.errors?.['required']">
+            Last Name is required
+        </div>
+    </div> -->
+
+
+        <div class="form-group">
+            <label class="col-form-label">Email</label>
+            <input id="primaryEmail" name="primaryEmail" type="email" class="form-control"
+                formControlName="primaryEmail" placeholder="Email" 
+              />
+            <small *ngIf="contactForm.get('primaryEmail').invalid && contactForm.get('primaryEmail').touched"
+                class="text-danger">Email is required.</small>
+        </div>
+        <!-- <div *ngIf="(primEmail.invalid && primEmail.touched) || primEmail.dirty">
+            <small *ngIf="primEmail.errors?.required" class="text-danger">Primary email is required</small>
+            <small *ngIf="primEmail.errors?.pattern" class="text-danger">Please provide a valid email address</small>
+        </div>  -->
+
+
+
+        <!-- <p>
+      <label for="email">Email </label>
+      <input type="text" id="email" name="email" formControlName="email">
+    </p>
+    <div *ngIf="!email.valid && (email.dirty ||email.touched)">
+      <div [hidden]="!email.errors.required">
+        email is required
+      </div>
+      <div [hidden]="!email.errors.email">
+        invalid email id
+      </div>
+    </div>
+      -->
+    <!-- <p>
+      <label for="gender">Geneder </label>
+      <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
+      <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+    </p>
+    <div *ngIf="!gender.valid && (gender.dirty ||gender.touched)">
+      <div [hidden]="!gender.errors.required">
+        gender is required
+      </div>
+    </div>        -->
+
+    <div class="form-group">
+      <label class="col-form-label">Mobile Number</label>
+      <input id="mobileNo" name="mobileNo" type="" class="form-control"
+          formControlName="mobileNo" placeholder="Mobile Number" />
+      <small *ngIf="contactForm.get('mobileNo').invalid && contactForm.get('mobileNo').touched"
+          class="text-danger">Mobile Number is required.</small>
+  </div>
+
+  <div class="form-group">
+    <label class="col-form-label">Current Location</label>
+    <input id="currentLoc" name="currentLoc" type="" class="form-control"
+        formControlName="currentLoc" placeholder="Current Location" />
+    <small *ngIf="contactForm.get('currentLoc').invalid && contactForm.get('currentLoc').touched"
+        class="text-danger">Current Location is required.</small>
+</div>
+
+
+<div class="form-group">
+  <label class="col-form-label">Loan Amount</label>
+  <input id="loanAmount" name="loanAmount" type="" class="form-control"
+      formControlName="loanAmount" placeholder="Loan Amount" />
+  <small *ngIf="contactForm.get('loanAmount').invalid && contactForm.get('loanAmount').touched"
+      class="text-danger">Loan Amount is required.</small>
+</div>
+        <button style="margin-top:30px;border: 1.5px solid;background-color: rgb(245, 167, 94); border-color: rgb(248, 122, 3);" type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+</section>
