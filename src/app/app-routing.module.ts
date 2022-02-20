@@ -15,6 +15,9 @@ const routes: Routes = [
   {path: 'loan', component: LoanComponent},
   {path: 'calculator', component: CalculatorComponent},
   {path: 'homeloan', component:HomeLoanComponent },
+
+  {path: '', component: HomePageComponent},
+
 ];
 
 @NgModule({
