@@ -20,7 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     LoanComponent,
     AboutUsComponent,
     ContactUsComponent,
-    CalculatorComponent,
+     CalculatorComponent,
     HomeLoanComponent,
     RegistrationComponent
   ],

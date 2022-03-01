@@ -1,23 +1,23 @@
 import { LabelType, Options } from '@angular-slider/ngx-slider';
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.css'],
 })
-export class CalculatorComponent implements AfterViewInit {
+export class CalculatorComponent implements OnInit {
   filters: any;
-  pemi:any = {
+  pemi: any = {
     value: '25',
   };
-  remi:any = {
+  remi: any = {
     value: '8.5',
   };
-  temi:any = {
+  temi: any = {
     value: '20',
   };
-  memi:any = {
+  memi: any = {
     value: '240',
   };
 
@@ -155,4 +155,5 @@ export class CalculatorComponent implements AfterViewInit {
       .replace(/,/g, '')
       .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
+  ngOnInit(): void {}
 }

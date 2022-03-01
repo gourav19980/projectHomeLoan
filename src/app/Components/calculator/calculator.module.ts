@@ -9,6 +9,6 @@ import { CalculatorComponent } from './calculator.component';
   imports: [CommonModule, FormsModule, NgxSliderModule],
   declarations: [CalculatorComponent],
   exports: [CalculatorComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class CalculatorModule {}

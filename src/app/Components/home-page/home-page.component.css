@@ -1,7 +1,9 @@
 .features {
-	margin: 4em auto;
+	margin: 0em auto;
 	padding: 1em;
-	position: relative;
+	position: absolute;
+	margin-left: 6em;
+	text-align: justify;
 }
 .feature-title {
 	color: #333;
